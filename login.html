@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Super Child Education Youth Club India</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(to right, #009688, #00796b);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            text-align: center;
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+            position: relative;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #009688;
+        }
+        .form-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+        .form-group label {
+            position: absolute;
+            top: 0;
+            left: 10px;
+            transition: 0.2s ease all;
+            color: #333;
+            pointer-events: none;
+            font-size: 16px;
+        }
+        .form-group input:focus + label,
+        .form-group input:not(:placeholder-shown) + label {
+            top: -20px;
+            left: 10px;
+            font-size: 12px;
+            color: #00796b;
+        }
+        .login-btn {
+            background: linear-gradient(to right, #00796b, #004d40);
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+        }
+        .login-btn:hover {
+            background: linear-gradient(to right, #004d40, #00796b);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        .password-container {
+            position: relative;
+        }
+        .password-toggle {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #00796b;
+            font-size: 20px;
+        }
+        .password-toggle.show {
+            color: #00796b;
+        }
+        .password-toggle.hide {
+            color: #bbb;
+        }
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #00796b;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            display: none;
+            margin: 20px auto;
+        }
+
+        img{
+
+            height: 120px;
+            width: 150px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="login.png" alt="Super Child Education Youth Club India Logo" style="max-width: 100px; margin-bottom: 20px;">
+        <h1>Login</h1>
+        <form id="loginForm" onsubmit="return validateLogin()">
+            <div class="form-group">
+                <input type="text" id="username" name="username" placeholder=" " required>
+                <label for="username">Username</label>
+            </div>
+            <div class="form-group password-container">
+                <input type="password" id="password" name="password" placeholder=" " required>
+                <label for="password">Password</label>
+                <span class="password-toggle hide" id="passwordToggle" onclick="togglePassword()">👀</span>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <div class="loader" id="loader"></div>
+        </form>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById('password');
+            const passwordToggle = document.getElementById('passwordToggle');
+            const type = passwordField.type === 'password' ? 'text' : 'password';
+            passwordField.type = type;
+            passwordToggle.classList.toggle('hide');
+            passwordToggle.classList.toggle('show');
+            passwordToggle.textContent = type === 'password' ? '🫣' : '👀';
+        }
+
+        function validateLogin() {
+            document.getElementById('loader').style.display = 'block';
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === '' || password === '') {
+                alert('Please fill in all fields.');
+                document.getElementById('loader').style.display = 'none';
+                return false;
+            }
+
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+
+            const validUser = users.find(user => user.username === username && user.password === password);
+
+            setTimeout(() => {
+                if (validUser) {
+                    window.location.href = validUser.dashboard;
+                } else {
+                    alert('Invalid username or password.');
+                }
+                document.getElementById('loader').style.display = 'none';
+            }, 1000);
+
+            return false;
+        }
+    </script>
+</body>
+</html>

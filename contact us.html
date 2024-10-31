@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.header h1{
+    color: white;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+.form-message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: green;
+    text-align: center;
+}
+.copyright p{
+    color: white;
+}
+
+</style>
+</head>
+<body>
+
+    <div class="header">
+
+        <a href="index.html"> <h1>My Website</h1></a>
+        <div class="bar"> <a href="#" class="fa fa-bars"></a></div>
+
+        <div class="list">
+
+            <ul>
+                <li><a href="index.html">Home</li></a>
+                <li><a href="about us.html">About</li></a>
+                <li><a href="contact us.html">Contact</li></a>
+            </ul>
+        </div>
+
+        
+    </div>
+
+
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>If you have any questions, feel free to reach out to us!</p>
+        
+        <form id="contact-form" action="https://formspree.io/f/xjkblrbv"
+        method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div id="form-message" class="form-message"></div>
+    </div>
+
+
+    <footer class="footer">
+
+        <div class="column-list">
+
+
+
+            <div class="about">
+                <h2>About Us</h2>
+                <hr>
+                <div class="list1">
+                    <ul>
+                        <li><a href="#">About Smile</a></li>
+                        <li><a href="#">Impact</a></li>
+                        <li><a href="#">Smilestones</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+            <div class="work">
+                <h2>Our Work</h2>
+                <hr>
+                <div class="list2">
+                    <ul>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Health</a></li>
+                        <li><a href="#">Livelihood</a></li>
+                        <li><a href="#">Disaster Response</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+            <div class="campaigns">
+                <h2>Campaigns</h2>
+                <hr>
+                <div class="list3">
+                    <ul>
+                        <li><a href="#">Health Cannot Wait</a></li>
+                        <li><a href="#">She Can Fly</a></li>
+                        <li><a href="#">Taiyari Kal Ki</a></li>
+                        <li><a href="#">Shiksha Na Ruke</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="icon">
+
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-instagram"></a>
+
+        </div>
+
+
+
+        <div class="copyright">
+            <p>&copy; 2024 Tauqueer</p>
+        </div>
+
+    </footer>
+
+
+   <script src="bar.js"></script>
+</body>
+</html>

@@ -1,0 +1,479 @@
+*{
+
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: beige;
+
+}
+
+
+
+
+.header{
+
+    height: 50px;
+    background-color:#0f7d5f;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+
+.list ul li{
+
+    display: inline;
+    padding: 30px;
+}
+
+ul{
+margin-top: 15px;
+font-size: 20px;
+
+}
+
+.header h1{
+
+    margin-top: 7px;
+    margin-left: 30px;
+}
+
+.header a{
+    text-decoration: none;
+    color: white;
+}
+li a{
+  text-decoration: none;
+  color: white;
+
+}
+.bar{
+    display: none;
+}
+
+
+.slider {
+    position: relative;
+    width: 950px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 2px solid rgb(60, 115, 4);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    border-radius: 10px;
+    height: 375px;
+    
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.container{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+;
+}
+
+.section{
+    background-color: #0f7d5f;
+    height: 250px;
+    width: 400px;
+    margin: 25px;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.section:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+}
+
+.footer{
+    margin-top: 150px;
+    background-color: rgb(6, 62, 44);
+    color: white;
+}
+
+
+li{
+
+    padding: 8px;
+    list-style: none;
+}
+
+.column-list li::before{
+   margin: 10px;
+    content: "\00BB";
+}
+
+
+
+.icon{
+
+text-align: center;
+margin-top: 20px;
+margin-bottom: 20px;
+
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  .fa-instagram {
+    
+    color: white;
+    background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  }
+
+
+  .fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 15px;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 10px;
+  }
+
+  .copyright{
+
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+
+.section img{
+
+height: 100px;
+width: 100px;
+
+  }
+
+  .section{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+}
+
+.row-1{
+
+    display: flex;
+    justify-content: center;
+}
+
+.row-2{
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.welcome-msg{
+
+    text-align: center;
+}
+
+.welcome-msg  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #0f7d5f;
+    margin-top: 30px;
+}
+
+.welcome-msg p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+
+.section h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.section p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #ffffff; 
+}
+
+
+.row-1 a{
+
+    text-decoration: none;
+}
+
+.row-2 a{
+
+    text-decoration: none;
+}
+
+.list ul li a:hover{
+
+    color: #15b398;
+}
+
+.column-list ul li a:hover{
+
+    color: #15b398;
+}
+
+.column-list{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+hr{
+
+    width: 115px;
+}
+
+.about{
+
+    margin-top: 20px;
+}
+.work{
+
+    margin-top: 20px;
+}
+ 
+.campaigns{
+
+    margin-top: 20px;
+}
+ 
+ .column-list h2{
+
+    margin-left: 20px;
+ }
+
+ .column-list hr{
+
+    margin-left: 20px;
+ }
+
+
+ .swipe{
+
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+ }
+
+ .swipe-img{
+    height: 420px;
+    width: 420px;
+    margin: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+ }
+
+ .swipe-msg{
+    height: 420px;
+    width: 420px;
+    margin: 20px;
+    background-color: #55ACEE;
+    padding: 20px;
+    box-sizing: border-box;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+
+ }
+ .swipe-msg p{
+    margin-top: 20px;
+ }
+ .swipe img{
+    border-radius: 10px;
+ }
+
+
+ .swipe-msg {
+    opacity: 0.8;
+    transform: translateX(100%);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  }
+  
+  .swipe-img {
+    opacity: 0.3;
+    transform: translateX(-100%);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  }
+  
+  .swipe-msg.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .swipe-img.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  #bars{
+    display: none;
+  }
+
+
+
+@media only screen and (max-width: 1000px) {
+   
+
+
+
+.slider{
+
+    width: auto;
+    height: 300px;
+    margin: 0 10px;
+    margin-top: 20px;
+}
+
+.list ul{
+
+    margin-right: -0px;
+}
+
+
+.list ul li{
+
+    display: inline;
+    padding: 10px;
+}
+
+.row-1{
+
+   flex-direction: column;
+   align-items: center;
+}
+
+.row-2{
+
+    flex-direction: column;
+    align-items: center;
+}
+
+.column-list{
+
+    flex-direction: column;
+    align-items: center;
+}
+
+.work{
+
+    margin-top: 30px;
+}
+ 
+.campaigns{
+
+    margin-top: 30px;
+}
+
+.swipe{
+
+    flex-direction: column;
+    align-items: center;
+}
+  }
+
+
+
+
+ @media only screen and (max-width: 600px) {
+
+.list{
+
+    display: none;
+}
+.header{
+
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s ease-out;
+}
+
+.list ul li{
+    display: list-item;
+
+  }
+  .bar{
+
+    position: absolute;
+    top: -8px;
+    right: 18px;
+    display: block;
+  }
+
+  .header.active {
+    height: 200px;
+    transition: 0.5s ease-out;
+}
+.list.active{
+    display: block;
+}
+
+ }
+
+
+ 
